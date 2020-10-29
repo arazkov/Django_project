@@ -7,4 +7,5 @@ urlpatterns = [
     path('polls/', include('polls.urls')),
     path('articles/', include('articles.urls')),
     path('admin/', admin.site.urls),
+    path('weather/', include('weather.urls')),
 ]
