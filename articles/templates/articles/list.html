@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}Last stories{% endblock %}
+
+{% block content %}
+
+<!--первая главная статья-->
+<div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">{{latest_articles_list.0.article_title}}</h1>
+      <p>{{latest_articles_list.0.article_text|slice:":500"}} ...</p>
+      <p><a class="btn btn-primary btn-lg" href="{% url 'articles:detail' latest_articles_list.0.id %}" role="button">Read more »</a></p>
+    </div>
+  </div>
+<!--три статьи-->
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-4">
+        <h2>{{latest_articles_list.1.article_title}}</h2>
+        <p>{{latest_articles_list.1.article_text|slice:":200"}} ...</p>
+        <p><a class="btn btn-secondary" href="{% url 'articles:detail' latest_articles_list.1.id %}" role="button">View details »</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>{{latest_articles_list.2.article_title}}</h2>
+        <p>{{latest_articles_list.2.article_text|slice:":200"}} ...</p>
+        <p><a class="btn btn-secondary" href="{% url 'articles:detail' latest_articles_list.2.id %}" role="button">View details »</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>{{latest_articles_list.3.article_title}}</h2>
+        <p>{{latest_articles_list.3.article_text|slice:":200"}} ...</p>
+        <p><a class="btn btn-secondary" href="{% url 'articles:detail' latest_articles_list.3.id %}" role="button">View details »</a></p>
+      </div>
+    </div>
+
+    <hr>
+
+  </div>
+
+    {% if latest_articles_list %}
+        {% for a in latest_articles_list|slice:"4:" %}
+            <li><a href="{% url 'articles:detail' a.id %}">{{a.article_title}}</a></li>
+        {% endfor %}
+    {% else %}
+        Articles not found, sorry...
+    {% endif %}
+
+
+{% endblock %}
