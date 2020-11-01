@@ -13,44 +13,55 @@
 
 </main>
 
-<!--название статьи-->
-    <h2>{{view_article_text.article_title}}</h2>
-<!--проверка на новую статью-->
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+  
+  <!--название статьи-->
+    <h1 class="mt-5">{{view_article_text.article_title}}</h1>
+    
+    <!--проверка на новую статью-->
     {% if view_article_text.was_published_recently %}
-        НОВАЯ СТАТЬЯ!
+        <p class="lead">НОВАЯ СТАТЬЯ!</p>
     {% endif %}
-<!--текст статьи-->
+    
+    <!--текст статьи-->
     <p>{{view_article_text.article_text}}</p>
-<!--дата публикации-->
+    
+    <!--дата публикации-->
     <h4><em>{{view_article_text.pub_date}}</em></h4>
 
-<!--полоски-->
-<hr>
-<hr>
+        <!--полоски-->
+        <hr>
+        <hr>
 
-{% if latest_coment_list %}
-    {% for i in latest_coment_list %}
-        <p>
-            <strong>{{i.coment_autor}}</strong><br>
-            {{i.coment_text}}
-        </p>
-    {% endfor %}
-{% else %}
-Коментарии не найдены, будьте первым.
-{% endif %}
-<hr>
-<hr>
-
-<!--поле коментариев-->
-<form action="{% url 'articles:leave_comment' view_article_text.id %}" method="POST">
-<!--    защита от csrf атак-->
-    {% csrf_token %}
-<!--    поле для введения имени-->
-    <input type="text" required placeholder="Ваше имя" name="name"><br>
-<!--    поле написания комментария-->
-    <textarea name="text" required="" placeholder="Текст коментария" cols="30" rows="10"></textarea><br>
-<!--    кнопка оставлеия коментария-->
-    <button type="submit">Оставить коментарий</button>
-</form>
+    <!-- комментарии пользователей -->
+        {% if latest_coment_list %}
+            {% for i in latest_coment_list %}                        
+                <p>
+                    <strong>{{i.coment_autor}}</strong><br>
+                    {{i.coment_text}}
+                </p>
+            {% endfor %}
+        {% else %}
+        Коментарии не найдены, будьте первым.
+        {% endif %}
+        <hr>
+        <hr>
+        
+       
+       
+        <!--поле коментариев-->
+        <form action="{% url 'articles:leave_comment' view_article_text.id %}" method="POST">
+        <!--    защита от csrf атак-->
+            {% csrf_token %}
+        <!--    поле для введения имени-->
+            <input type="text" required placeholder="Ваше имя" name="name"><br>
+        <!--    поле написания комментария-->
+            <textarea name="text" required="" placeholder="Текст коментария" cols="30" rows="10"></textarea><br>
+        <!--    кнопка оставлеия коментария-->
+            <button type="submit">Оставить коментарий</button>
+        </form>
+  </div>
+</main>
 
 {% endblock %}

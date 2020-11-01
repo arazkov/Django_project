@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+  <body>
+  
+  
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Weather app</h1>
+  <p class="lead">Now You can views this infomation about TIME, you IP Addresse and WEATHER in you city.</p>
+    </div>    
+    <div class="card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">IP Addresse</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">{{ ip }}<small class="text-muted"></small></h1>
+        <ul class="list-unstyled mt-3 mb-4">          
+        </ul>        
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">TIME</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">{{ time }}<small class="text-muted"></small></h1>
+        <ul class="list-unstyled mt-3 mb-4">          
+        </ul>        
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">WEATHER</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">{{ weather }}<small class="text-muted"></small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+        </ul>        
+      </div>
+    </div>
+  </div>
+  
+  </body>
+</html>

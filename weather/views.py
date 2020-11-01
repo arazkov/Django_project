@@ -26,7 +26,8 @@ def what_weather(city):
 def weather_def(request):
     time_now = dt.datetime.now().strftime('%H:%M')
     ip = get('https://api.ipify.org').text
-    return HttpResponse('Weather page,\n  '
-                        'time now {}, My public IP address is: {}, '
-                        'weather {}'.format(time_now, ip, what_weather(what_city(ip))))
-
+    return render(request, 'weather/weather.html', {'ip': ip,
+                                                    'time': time_now,
+                                                    'city': what_city(ip),
+                                                    'weather': what_weather(what_city(ip))
+                                                    })
