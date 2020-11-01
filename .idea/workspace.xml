@@ -21,8 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b7245138-cdcd-458b-a2fd-8fae27962c66" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/weather/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,9 +134,10 @@
       <screen x="0" y="36" width="1366" height="732" />
     </state>
     <state x="142" y="58" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.36.1366.732@0.36.1366.732" timestamp="1602361488046" />
-    <state x="467" y="160" key="FileChooserDialogImpl" timestamp="1603996389974">
-      <screen x="0" y="36" width="1366" height="732" />
+    <state x="467" y="153" key="FileChooserDialogImpl" timestamp="1604172860554">
+      <screen x="0" y="28" width="1366" height="740" />
     </state>
+    <state x="467" y="153" key="FileChooserDialogImpl/0.28.1366.740@0.28.1366.740" timestamp="1604172860554" />
     <state x="467" y="160" key="FileChooserDialogImpl/0.36.1366.732@0.36.1366.732" timestamp="1603996389974" />
     <state width="1345" height="175" key="GridCell.Tab.0.bottom" timestamp="1602363279795">
       <screen x="0" y="36" width="1366" height="732" />
@@ -156,10 +155,15 @@
       <screen x="0" y="36" width="1366" height="732" />
     </state>
     <state width="1345" height="175" key="GridCell.Tab.0.right/0.36.1366.732@0.36.1366.732" timestamp="1602363279795" />
-    <state x="0" y="36" width="977" height="732" key="SettingsEditor" timestamp="1604000617247">
-      <screen x="0" y="36" width="1366" height="732" />
+    <state x="0" y="28" width="977" height="732" key="SettingsEditor" timestamp="1604172278471">
+      <screen x="0" y="28" width="1366" height="740" />
     </state>
+    <state x="0" y="28" key="SettingsEditor/0.28.1366.740@0.28.1366.740" timestamp="1604172278471" />
     <state x="0" y="36" width="977" height="732" key="SettingsEditor/0.36.1366.732@0.36.1366.732" timestamp="1604000617247" />
+    <state x="500" y="311" width="366" height="178" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604168785129">
+      <screen x="0" y="28" width="1366" height="740" />
+    </state>
+    <state x="500" y="311" width="366" height="178" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1366.740@0.28.1366.740" timestamp="1604168785129" />
     <state x="0" y="51" width="1176" height="717" key="dock-window-1" timestamp="1603623036077">
       <screen x="0" y="36" width="1366" height="732" />
     </state>
