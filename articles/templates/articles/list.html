@@ -34,16 +34,16 @@
     </div>
 
     <hr>
-
+            {% if latest_articles_list %}
+                {% for a in latest_articles_list|slice:"4:" %}
+                    <li><a href="{% url 'articles:detail' a.id %}">{{a.article_title}}</a></li>
+                {% endfor %}
+            {% else %}
+                Articles not found, sorry...
+            {% endif %}
   </div>
 
-    {% if latest_articles_list %}
-        {% for a in latest_articles_list|slice:"4:" %}
-            <li><a href="{% url 'articles:detail' a.id %}">{{a.article_title}}</a></li>
-        {% endfor %}
-    {% else %}
-        Articles not found, sorry...
-    {% endif %}
+   
 
 
 {% endblock %}
