@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Weather</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   </head>
   <body>
@@ -18,7 +19,27 @@
         <h4 class="my-0 font-weight-normal">IP Addresse</h4>
       </div>
       <div class="card-body">
-        <h1 class="card-title pricing-card-title">{{ ip }}<small class="text-muted"></small></h1>
+        <h1 class="card-title pricing-card-title">
+        
+        <script type="application/javascript"> var ip; function getIP(json) {document.write(ip=json.ip);}</script>
+        <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+        
+                
+        <script type="text/javascript">
+            var api_key = "at_RCFYVD5Ff1aODQh0IyY2cdRPWm5rq";
+            var lang = "?lang=ru"
+            $(function () {
+            $.ajax({
+           url: "http://ip-api.com/json/",
+           data: {ipAddress: ip, lang: lang},
+           success: function(data) {
+               $("body").append("<pre>"+ JSON.stringify(data,"",2)+"</pre>");
+           }
+       });
+    });
+</script>
+        
+        <small class="text-muted"></small></h1>
         <ul class="list-unstyled mt-3 mb-4">          
         </ul>        
       </div>
