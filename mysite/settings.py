@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'articles.apps.ArticlesConfig',
     'polls.apps.PollsConfig',
     'weather.apps.WeatherConfig',
+    'fantlab.apps.FantlabConfig',
 ]
 
 MIDDLEWARE = [

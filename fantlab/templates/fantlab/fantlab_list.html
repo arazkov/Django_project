@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}FantLab{% endblock %}
+
+{% block content %}
+
+<body><div id="pratikabuSTTDiv" class="pratikabusttdiv-no-print" style="bottom: 20px; right: 20px; opacity: 1; display: block; width: 48px;"><img id="pratikabuSTTArrowUp" style="float: right; opacity: 0.5; cursor: pointer; width: 48px; height: 48px;" class="pratikabuSTTImg" src="chrome-extension://hegiignepmecppikdlbohnnbfjdoaghj/icons/pratikabu-stt-48-1.png"><div id="pratikabuSTTDiv2" class="pratikabusttdiv-no-print" style="width: 48px; opacity: 0; display: none; margin-left: 0px;"><img id="pratikabuSTTClear" class="pratikabuSTTImg" src="chrome-extension://hegiignepmecppikdlbohnnbfjdoaghj/icons/pratikabu-stt-clear-24.png" style="opacity: 0.5; cursor: pointer;"><img id="pratikabuSTTPageUp" class="pratikabuSTTImg" src="chrome-extension://hegiignepmecppikdlbohnnbfjdoaghj/icons/pratikabu-stt-pageup-24.png" style="opacity: 0.5; cursor: pointer;"><img id="pratikabuSTTSettings" class="pratikabuSTTImg" src="chrome-extension://hegiignepmecppikdlbohnnbfjdoaghj/icons/pratikabu-stt-bottom-24.png" style="opacity: 0.5; cursor: pointer;"><img id="pratikabuSTTPageDown" class="pratikabuSTTImg pratikabuSTTRotate180" src="chrome-extension://hegiignepmecppikdlbohnnbfjdoaghj/icons/pratikabu-stt-pageup-24.png" style="opacity: 0.5; cursor: pointer;"></div></div>
+    
+<div class="container">
+  <header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <a class="link-secondary" href="#">Subscribe</a>
+      </div>
+      <div class="col-4 text-center">
+        <a class="blog-header-logo text-dark" href="#">Large</a>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="link-secondary" href="#" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"></circle><path d="M21 21l-5.2-5.2"></path></svg>
+        </a>
+        <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+      </div>
+    </div>
+  </header>
+
+  
+</div>
+
+<main class="container">
+  <div class="row mb-2">
+  
+{% for a in list|slice:"0:" %}
+  
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">{{ a.work_author }}</strong>
+          <h3 class="mb-0">{{ a.work_name }}</h3>
+          <div class="mb-1 text-muted">{{ a.mark_date }}</div>
+          <p class="card-text mb-auto">{{ ano }}</p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src= {{ a.work_image }} alt="..." class="img-rounded" >
+        </div>
+      </div>
+    </div>
+    
+{% endfor %}
+
+  </div>
+</main>
+    
+                  
+    
+<footer class="blog-footer">
+  <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+  <p>
+    <a href="#">Back to top</a>
+  </p>
+</footer>
+
+<div at-magnifier-wrapper=""><div class="at-theme-light"><div class="at-base notranslate" translate="no"><div class="Z1-AJ" style="top: 0px; left: 0px;"></div></div></div></div>  
+
+
+{% endblock %}
+
+
+
+
