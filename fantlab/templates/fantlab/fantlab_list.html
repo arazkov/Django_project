@@ -37,8 +37,8 @@
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-primary">{{ a.work_author }}</strong>
           <h3 class="mb-0">{{ a.work_name }}</h3>
-          <div class="mb-1 text-muted">{{ a.mark_date }}</div>
-          <p class="card-text mb-auto">{{ ano }}</p>
+          <div class="mb-1 text-muted">{{ a.mark_date}}</div>
+          <p class="card-text mb-auto">{{ a.anotation|slice:":300" }}</p>
           <a href="#" class="stretched-link">Continue reading</a>
         </div>
         <div class="col-auto d-none d-lg-block">
